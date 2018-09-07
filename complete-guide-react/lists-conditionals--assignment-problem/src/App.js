@@ -22,7 +22,10 @@ class App extends Component {
     /*split transforma em array para pode trabalhar com o splice onde removemos conforme o index e no setState modificamos o valor ja com o join para juntar o array sem o caracter clicado */
     let remove = this.state.inputValue.split('');
     remove.splice(charIndex, 1);
-    this.setState({ inputValue: remove.join('') });
+    this.setState({
+      inputValue: remove.join(''),
+      inputLength: this.state.inputValue.length - 1
+    });
   };
 
   /* Utilizando o split para separar cada letra e transformar o conteúdo em um array para ser percorrido pelo map */

@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Validation extends Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.length < 5 ? 'Text too short' : 'Text long enough'}</h1>
-      </div>
-    );
-  }
-}
+const Validation = props => {
+  return (
+    <div>
+      <h1>{props.length < 5 ? 'Text too short' : 'Text long enough'}</h1>
+    </div>
+  );
+};
 
 export default Validation;
